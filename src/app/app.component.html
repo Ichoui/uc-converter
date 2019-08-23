@@ -1,14 +1,13 @@
-<form class="form-uc" [formGroup]="form">
+<form class="form-uc" >
   <mat-form-field class="euros">
-    <input matInput placeholder="€" formControlName="euros" type="number" (change)="eurosChange()">
+    <input matInput placeholder="€" step="0.01" type="number" [formControl]="formEuros" [(ngModel)]="eurosValue">
   </mat-form-field>
 
   <div class="switch">< ></div>
   <mat-form-field class="uc">
-    <input matInput placeholder="UC" formControlName="uniteChaltiel" type="number" (change)="chaltielChange()">
+    <input matInput placeholder="UC" step="0.01" type="number" [formControl]="formChaltiel" [(ngModel)]="chaltielValue">
   </mat-form-field>
 </form>
 
-<div class="not-int">Seuls les chiffres sont autorisés.</div>
-
 <!-- Courbe du chaltiel -->
+<h2>Cours du Chaltiel ({{ today }}, {{ time }})</h2>

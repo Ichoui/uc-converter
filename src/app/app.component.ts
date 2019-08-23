@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl } from '@angular/forms';
+import { debounceTime, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'uc-root',
@@ -7,9 +8,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  form: FormGroup;
+
+  formEuros: FormControl;
+  formChaltiel: FormControl;
   eurosValue: number;
   chaltielValue: number;
+  date: Date;
+  today: any;
+  time: any;
 
   constructor(
     private fb: FormBuilder
@@ -17,27 +23,36 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.myForm(this.eurosValue, this.chaltielValue);
+    this.date = new Date();
+    this.today = this.date.getDate() + '-' + this.date.getMonth() + '-' + this.date.getFullYear();
+    this.time = this.date.getHours() + ':' + this.date.getMinutes();
+    this.formEuros = new FormControl();
+    this.formChaltiel = new FormControl();
+    this.eurosChange();
+    this.chaltielChange();
   }
 
   eurosChange(): void {
     // quand touche enfoncée, on fait ça
-    this.eurosValue = this.form.get('euros').value;
-    this.chaltielValue = this.eurosValue / 20.33;
-    this.myForm(this.eurosValue, this.chaltielValue);
+    this.formEuros.valueChanges.pipe(
+      debounceTime(600),
+      tap( inputValue => {
+        this.eurosValue = inputValue;
+        this.chaltielValue = this.eurosValue / 20.33;
+        this.chaltielValue.toFixed(2)
+      })
+    ).subscribe();
   }
 
   chaltielChange(): void {
-    // quand touche enfoncée, on fait ça
-    this.chaltielValue = this.form.get('uniteChaltiel').value;
-    this.eurosValue = this.chaltielValue * 20.33;
-    this.myForm(this.eurosValue, this.chaltielValue);
-  }
+    this.formChaltiel.valueChanges.pipe(
+      debounceTime(600),
+      tap(inputValue => {
+        this.chaltielValue = inputValue;
+        this.eurosValue = this.chaltielValue * 20.33;
+        this.eurosValue.toFixed(2);
+      })
+    ).subscribe();
 
-  myForm(euros, chaltiel): void {
-    this.form = this.fb.group({
-      euros: [euros],
-      uniteChaltiel: [chaltiel]
-    });
   }
 }
