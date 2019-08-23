@@ -1,10 +1,14 @@
-<form class="form-uc">
-  <mat-form-field class="uc">
-    <input matInput placeholder="€">
+<form class="form-uc" [formGroup]="form">
+  <mat-form-field class="euros">
+    <input matInput placeholder="€" formControlName="euros" type="number" (change)="eurosChange()">
   </mat-form-field>
 
   <div class="switch">< ></div>
   <mat-form-field class="uc">
-    <input matInput placeholder="UC">
+    <input matInput placeholder="UC" formControlName="uniteChaltiel" type="number" (change)="chaltielChange()">
   </mat-form-field>
 </form>
+
+<div class="not-int">Seuls les chiffres sont autorisés.</div>
+
+<!-- Courbe du chaltiel -->
