@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { debounceTime, tap } from 'rxjs/operators';
 
 @Component({
@@ -17,9 +17,7 @@ export class AppComponent implements OnInit {
   today: any;
   time: any;
 
-  constructor(
-    private fb: FormBuilder
-  ) {
+  constructor() {
   }
 
   ngOnInit(): void {
@@ -33,13 +31,11 @@ export class AppComponent implements OnInit {
   }
 
   eurosChange(): void {
-    // quand touche enfoncée, on fait ça
     this.formEuros.valueChanges.pipe(
       debounceTime(600),
-      tap( inputValue => {
+      tap(inputValue => {
         this.eurosValue = inputValue;
-        this.chaltielValue = this.eurosValue / 20.33;
-        this.chaltielValue.toFixed(2)
+        this.chaltielValue = Number((this.eurosValue / 20.33).toFixed(2));
       })
     ).subscribe();
   }
@@ -49,10 +45,12 @@ export class AppComponent implements OnInit {
       debounceTime(600),
       tap(inputValue => {
         this.chaltielValue = inputValue;
-        this.eurosValue = this.chaltielValue * 20.33;
-        this.eurosValue.toFixed(2);
+        this.eurosValue = Number((this.chaltielValue * 20.33).toFixed(2));
       })
     ).subscribe();
+  }
+
+  saveToJson(): void {
 
   }
 }
