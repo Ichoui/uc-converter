@@ -1,0 +1,12 @@
+<section class="convert-chaltiel" >
+  <mat-form-field class="euros">
+    <input matInput placeholder="€" step="0.1" type="number" [formControl]="formEuros" [(ngModel)]="eurosValue">
+  </mat-form-field>
+
+  <div class="switch">< ></div>
+  <mat-form-field class="uc">
+    <input matInput placeholder="UC" step="0.1" type="number" [formControl]="formChaltiel" [(ngModel)]="chaltielValue">
+  </mat-form-field>
+</section>
+
+<uc-bourse></uc-bourse>

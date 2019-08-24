@@ -6,11 +6,14 @@ import { AppComponent } from './app.component';
 import { MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DecimalPipe } from '@angular/common';
+import { ConvertComponent } from './convert/convert.component';
+import { BourseComponent } from './bourse/bourse.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ConvertComponent,
+    BourseComponent
   ],
   imports: [
     BrowserModule,
