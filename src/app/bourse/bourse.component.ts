@@ -16,8 +16,6 @@ export class BourseComponent implements OnInit {
 
   ngOnInit() {
     this.date = new Date();
-    this.today = this.date.getDate() + '-' + this.date.getMonth() + '-' + this.date.getFullYear();
-    this.time = this.date.getHours() + ':' + this.date.getMinutes();
   }
 
   reload(): void {
