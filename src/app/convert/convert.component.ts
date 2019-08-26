@@ -13,7 +13,7 @@ export class ConvertComponent implements OnInit {
   formChaltiel: FormControl;
   eurosValue: number;
   chaltielValue: number;
-
+  test = 'e';
 
   constructor() {
   }

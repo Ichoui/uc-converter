@@ -1,7 +1,29 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
+
 section.convert-chaltiel {
-  display:flex;
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.mat-form-field {
+  &:focus {
+    outline-width: 0;
+  }
+
+  .placeholder.icon-chaltiel {
+    font-size: 1.4em;
+    padding-bottom: 6px;
+  }
+}
+
+.switch {
+  margin: 0 40px;
+  font-size: 2em;
+}
+
+@media all and (max-width: 768px) {
+
 }

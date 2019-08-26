@@ -8,17 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class BourseComponent implements OnInit {
 
   date: Date;
-  today: any;
-  time: any;
 
   constructor() {
+    setInterval(() => {
+      this.date = new Date();
+    }, 1);
   }
 
   ngOnInit() {
-    this.date = new Date();
   }
 
-  reload(): void {
-
-  }
 }

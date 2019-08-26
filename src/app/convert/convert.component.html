@@ -1,11 +1,16 @@
+<uc-navbar></uc-navbar>
+
 <section class="convert-chaltiel" >
   <mat-form-field class="euros">
-    <input matInput placeholder="€" step="0.1" type="number" [formControl]="formEuros" [(ngModel)]="eurosValue">
+    <input matInput step="0.1" type="number" [formControl]="formEuros" [(ngModel)]="eurosValue">
+    <mat-placeholder class="placeholder icon-euros"></mat-placeholder>
   </mat-form-field>
 
-  <div class="switch">< ></div>
+  <div class="switch icon-arrows"></div>
+
   <mat-form-field class="uc">
-    <input matInput placeholder="UC" step="0.1" type="number" [formControl]="formChaltiel" [(ngModel)]="chaltielValue">
+    <input matInput step="0.1" type="number" [formControl]="formChaltiel" [(ngModel)]="chaltielValue">
+    <mat-placeholder class="placeholder icon-chaltiel"></mat-placeholder>
   </mat-form-field>
 </section>
 

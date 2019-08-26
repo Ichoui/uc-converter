@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConvertComponent } from './convert/convert.component';
 import { BourseComponent } from './bourse/bourse.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConvertComponent,
-    BourseComponent
+    BourseComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
