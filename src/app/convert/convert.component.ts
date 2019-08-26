@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
 
-export interface Language {
+export interface Currency {
   value: string;
   icon: string;
 }
@@ -14,27 +14,48 @@ export interface Language {
 })
 export class ConvertComponent implements OnInit {
 
-  euross: FormControl;
-  form: FormGroup;
-  eurosValue: any;
-  chaltielValue: any;
-  languages: Language[] = [
+  formSwitch: FormGroup;
+  currency: FormControl;
+  currencies: Currency[] = [
     {value: 'eur', icon: 'euros'},
-    {value: 'cad', icon: 'canada'},
     {value: 'uc', icon: 'chaltiel'}
   ];
+
+  selectedCurr = 'euros';
+  notSelectedCurr = 'chaltiel';
 
   constructor(private fb: FormBuilder) {
   }
 
   ngOnInit(): void {
-    this.myForm(this.eurosValue, this.chaltielValue);
-    this.form.valueChanges.pipe(
-      debounceTime(1500),
-    ).subscribe(console.log);
+    this.currency = new FormControl();
+
+    // this.myForm(this.eurosValue, this.chaltielValue);
+    // this.form.valueChanges.pipe(
+    //   debounceTime(1500),
+    // ).subscribe(console.log);
+
+    this.formSwitch = this.fb.group({
+      from: [],
+      to: []
+    })
   }
 
-  eurosChange(): void {
+  currencyChange(): void {
+
+  }
+
+  change(): void {
+
+  }
+
+
+  //////////////
+  //////////////
+  //////////////
+  //////////////
+  //////////////
+ /* eurosChange(): void {
 
     this.eurosValue = this.form.get('euros').value;
     this.chaltielValue = Number((this.eurosValue / 20.33).toFixed(2));
@@ -42,8 +63,6 @@ export class ConvertComponent implements OnInit {
   }
 
   chaltielChange(): void {
-
-
     console.log('putain de dieu');
     this.chaltielValue = this.form.get('chaltiel').value;
     this.eurosValue = Number((this.chaltielValue * 20.33).toFixed(2));
@@ -56,7 +75,7 @@ export class ConvertComponent implements OnInit {
       chaltiel: [chaltiel]
     });
   }
-
+*/
   //////////////
   //////////////
   //////////////
@@ -72,7 +91,4 @@ export class ConvertComponent implements OnInit {
     ).subscribe();*!*/
 
 
-  change(): void {
-
-  }
 }

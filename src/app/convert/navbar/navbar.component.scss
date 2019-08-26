@@ -1,12 +1,15 @@
+@import "../../../styles/_shared.scss";
+
 nav {
   display: flex;
   align-items: baseline;
 
   .logo {
     font-size: 5em;
+    color: $white;
   }
 
   .title {
-
+    color: $white;
   }
 }

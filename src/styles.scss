@@ -1,12 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
-@import "./assets/icomoon/style.css";
+@import "assets/icomoon/style.css";
+@import "styles/shared";
+@import "styles/stylefullpage";
 
 
-body {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: url('./assets/hagridhouse.jpg') no-repeat #ecece4;
-}
+

@@ -1,27 +1,47 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
+@import "../../styles/_shared.scss";
 
 section.convert-chaltiel {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background-color: $white;
 }
-
+.mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
+  color: inherit !important;
+}
 .mat-form-field {
   &:focus {
     outline-width: 0;
   }
 
-  .placeholder.icon-chaltiel {
-    font-size: 1.4em;
-    padding-bottom: 6px;
+  .row {
+    display: flex;
+    flex-direction: row;
   }
 }
 
-.switch {
-  margin: 0 40px;
-  font-size: 2em;
+// First part
+.inputs {
+  .icons {
+    position: absolute;
+    right: 0;
+  }
 }
+
+// Second part
+.switcher {
+
+  .switch {
+    display: inline-block;
+    margin: 0 40px;
+    font-size: 2em;
+    color: $buttons;
+  }
+}
+
+// Last part
 
 @media all and (max-width: 768px) {
 

@@ -1,6 +1,5 @@
 <uc-navbar></uc-navbar>
-
-<section class="convert-chaltiel" [formGroup]="form">
+<!--<section class="convert-chaltiel" [formGroup]="form">
   <mat-form-field class="euros">
     <input matInput step="0.1" type="number" formControlName="euros" (input)="eurosChange()">
     <mat-placeholder class="placeholder icon-euros"></mat-placeholder>
@@ -12,30 +11,50 @@
     <input matInput step="0.1" type="number" formControlName="chaltiel" (input)="chaltielChange()">
     <mat-placeholder class="placeholder icon-chaltiel"></mat-placeholder>
   </mat-form-field>
-</section>
+</section>-->
 <!---->
 <!---->
 <!---->
 <!---->
 <!---->
+
 <section class="convert-chaltiel">
-  <mat-form-field>
-    <mat-select>
-      <mat-option *ngFor="let language of languages" [value]="language.value">
-        <span class="icon-{{language.icon}}">{{language.icon}}</span>
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+  <div> EUR / UC</div>
+  <div class="row inputs">
+    <mat-form-field class="value" appearance="outline">
+      <input matInput step="0.1" type="number" [formControl]="currency" (input)="currencyChange()">
+      <mat-label>Montant</mat-label>
+      <mat-icon matSuffix class="icon-euros"></mat-icon>
+    </mat-form-field>
 
-  <mat-form-field class="euros">
-    <input matInput step="0.1" type="number" [formControl]="euross" (input)="eurosChange()">
-    <mat-placeholder class="placeholder icon-euros"></mat-placeholder>
-  </mat-form-field>
+    <mat-form-field class="converted" appearance="outline">
+      <input matInput type="number" disabled>
+      <mat-label>Converti en</mat-label>
+      <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
+    </mat-form-field>
+  </div>
 
-  <div class="switch icon-arrows double" (click)="change()"></div>
 
-  <div class="boxtoarrange">{{ chaltielValue }}</div>
+  <div class="row switcher">
+    <mat-form-field class="converted" appearance="outline">
+      <input matInput type="number" disabled>
+      <mat-label>Depuis</mat-label>
+      <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
+    </mat-form-field>
 
+    <div class="switch icon-arrows" (click)="change()"></div>
+
+    <mat-form-field class="converted" appearance="outline">
+      <input matInput type="number" disabled>
+      <mat-label>Vers</mat-label>
+      <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
+    </mat-form-field>
+
+  </div>
+
+  <div class="row footer">
+
+  </div>
 </section>
 
 <uc-bourse></uc-bourse>

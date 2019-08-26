@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConvertComponent } from './convert/convert.component';
 import { BourseComponent } from './convert/bourse/bourse.component';
 import { NavbarComponent } from './convert/navbar/navbar.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { NavbarComponent } from './convert/navbar/navbar.component';
     BrowserAnimationsModule,
     MatInputModule,
     FormsModule,
+    MatIconModule,
     MatSelectModule
   ],
   providers: [],
