@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatInputModule } from '@angular/material';
+import { MatInputModule, MatSelectModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConvertComponent } from './convert/convert.component';
@@ -24,6 +24,7 @@ import { NavbarComponent } from './convert/navbar/navbar.component';
     BrowserAnimationsModule,
     MatInputModule,
     FormsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
