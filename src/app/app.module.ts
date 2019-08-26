@@ -9,15 +9,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConvertComponent } from './convert/convert.component';
 import { BourseComponent } from './convert/bourse/bourse.component';
 import { NavbarComponent } from './convert/navbar/navbar.component';
-import { HistoriqueComponent } from './convert/historique/historique.component';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConvertComponent,
     BourseComponent,
-    HistoriqueComponent,
     NavbarComponent
   ],
   imports: [
@@ -27,7 +24,6 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatInputModule,
     FormsModule,
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
