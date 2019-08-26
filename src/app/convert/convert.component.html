@@ -1,6 +1,6 @@
 <uc-navbar></uc-navbar>
 
-<section class="convert-chaltiel" >
+<section class="convert-chaltiel">
   <mat-form-field class="euros">
     <input matInput step="0.1" type="number" [formControl]="formEuros" [(ngModel)]="eurosValue">
     <mat-placeholder class="placeholder icon-euros"></mat-placeholder>
@@ -14,4 +14,7 @@
   </mat-form-field>
 </section>
 
-<uc-bourse></uc-bourse>
+<div class="bottom-page">
+  <uc-bourse></uc-bourse>
+  <uc-historique></uc-historique>
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { debounceTime, tap } from 'rxjs/operators';
+import { debounceTime, first, tap } from 'rxjs/operators';
+import { ConvertService } from './convert.service';
 
 @Component({
   selector: 'uc-convert',
@@ -13,9 +14,8 @@ export class ConvertComponent implements OnInit {
   formChaltiel: FormControl;
   eurosValue: number;
   chaltielValue: number;
-  test = 'e';
 
-  constructor() {
+  constructor(private convertService: ConvertService) {
   }
 
   ngOnInit(): void {
@@ -31,6 +31,12 @@ export class ConvertComponent implements OnInit {
       tap(inputValue => {
         this.eurosValue = inputValue;
         this.chaltielValue = Number((this.eurosValue / 20.33).toFixed(2));
+      }),
+      tap(val => {
+        if (!isNaN(val)) {
+          console.log(val);
+          return this.convertService.writeJson(val);
+        }
       })
     ).subscribe();
   }

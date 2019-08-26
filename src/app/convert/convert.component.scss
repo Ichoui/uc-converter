@@ -1,7 +1,6 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
-
 section.convert-chaltiel {
   display: flex;
   justify-content: center;
@@ -22,6 +21,14 @@ section.convert-chaltiel {
 .switch {
   margin: 0 40px;
   font-size: 2em;
+}
+
+.bottom-page {
+  display: flex;
+
+  uc-bourse, uc-historique {
+    width: 50%;
+  }
 }
 
 @media all and (max-width: 768px) {
