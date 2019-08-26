@@ -19,7 +19,7 @@
 <!---->
 
 <section class="convert-chaltiel">
-  <div> EUR / UC</div>
+  <div class="subtitle"> EUR / UC</div>
   <div class="row inputs">
     <mat-form-field class="value" appearance="outline">
       <input matInput step="0.1" type="number" [formControl]="currency" (input)="currencyChange()">
@@ -28,7 +28,7 @@
     </mat-form-field>
 
     <mat-form-field class="converted" appearance="outline">
-      <input matInput type="number" disabled>
+      <input matInput type="number" [(ngModel)]="tes" disabled>
       <mat-label>Converti en</mat-label>
       <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
     </mat-form-field>
@@ -36,24 +36,32 @@
 
 
   <div class="row switcher">
-    <mat-form-field class="converted" appearance="outline">
-      <input matInput type="number" disabled>
-      <mat-label>Depuis</mat-label>
-      <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
-    </mat-form-field>
+    <div class="left-part">
+      <mat-form-field class="converted" appearance="outline">
+        <input matInput type="text" [ngModel]="valueSwitch" disabled>
+        <mat-label>Depuis</mat-label>
+        <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
+      </mat-form-field>
 
-    <div class="switch icon-arrows" (click)="change()"></div>
+      <div class="switch icon-arrows" (click)="change()"></div>
 
-    <mat-form-field class="converted" appearance="outline">
-      <input matInput type="number" disabled>
-      <mat-label>Vers</mat-label>
-      <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
-    </mat-form-field>
-
+      <mat-form-field class="converted" appearance="outline">
+        <input matInput type="text" [ngModel]="valueSwitch" disabled>
+        <mat-label>Vers</mat-label>
+        <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="right-part">
+      bla
+    </div>
   </div>
 
   <div class="row footer">
+    <div class="left-part">
+    </div>
+    <div class="right-part">
 
+    </div>
   </div>
 </section>
 

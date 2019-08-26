@@ -16,6 +16,8 @@ export class ConvertComponent implements OnInit {
 
   formSwitch: FormGroup;
   currency: FormControl;
+  tes = 5;
+  valueSwitch: string;
   currencies: Currency[] = [
     {value: 'eur', icon: 'euros'},
     {value: 'uc', icon: 'chaltiel'}
@@ -29,6 +31,7 @@ export class ConvertComponent implements OnInit {
 
   ngOnInit(): void {
     this.currency = new FormControl();
+    this.valueSwitch = "test";
 
     // this.myForm(this.eurosValue, this.chaltielValue);
     // this.form.valueChanges.pipe(

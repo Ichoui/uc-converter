@@ -2,28 +2,44 @@
 @import "../../styles/_shared.scss";
 
 section.convert-chaltiel {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: $white;
-}
-.mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
-  color: inherit !important;
-}
-.mat-form-field {
-  &:focus {
-    outline-width: 0;
-  }
+  width: 80vw;
+  margin: 70px auto 0;
 
-  .row {
-    display: flex;
-    flex-direction: row;
+  .subtitle {
+    position: absolute;
+    color: $white;
+    top: -20px;
+    left: 0;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+  height: 60px;
+  width: 100%;
+  &:last-child {
+    margin-bottom:0;
+  }
+  .left-part, .right-part {
+    width: 50%;
   }
 }
 
 // First part
 .inputs {
+  mat-form-field {
+    width: 35vw;
+    margin: 0 20px;
+  }
+
   .icons {
     position: absolute;
     right: 0;
@@ -42,6 +58,25 @@ section.convert-chaltiel {
 }
 
 // Last part
+.footer {
+  background-color: $footer;
+  width: 100%;
+}
+
+// SURCHARGE MATERIAL
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
+  color: rgba(0, 0, 0, .12) !important;
+}
+
+::ng-deep input:disabled {
+  color: black !important;
+}
+
+.mat-form-field {
+  &:focus {
+    outline-width: 0;
+  }
+}
 
 @media all and (max-width: 768px) {
 
