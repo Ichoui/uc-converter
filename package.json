@@ -2,12 +2,10 @@
   "name": "unite-ch",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve -o --port=2033",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build": "ng build --prod",
+    "firebase_deploy": "firebase deploy",
+    "deploy_prod": "ng build --prod && firebase deploy"
   },
   "private": true,
   "dependencies": {

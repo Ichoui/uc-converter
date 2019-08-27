@@ -9,13 +9,15 @@ section.convert-chaltiel {
   flex-direction: column;
   background-color: $white;
   width: 80vw;
-  margin: 70px auto 0;
+  margin: 15vh auto 0;
+  border-radius: 5px;
 
   .subtitle {
     position: absolute;
     color: $white;
-    top: -20px;
+    top: -35px;
     left: 0;
+    font-size: 1.3em;
   }
 }
 
@@ -52,13 +54,9 @@ section.convert-chaltiel {
 
 // SECOND PART
 .switcher {
-  > div {
-  }
-
   mat-form-field {
     width: 35%;
   }
-
 
   .switch {
     display: inline-block;
@@ -67,12 +65,61 @@ section.convert-chaltiel {
     color: $buttons;
     cursor: pointer;
   }
+
+  .curencies-rate {
+    font-size: 1.5em;
+
+    span:first-child {
+      color: $buttons;
+      font-size: 0.7em;
+      padding-right: 5px;
+    }
+
+    span:last-child {
+      font-size: .8em;
+      padding: 0 4px;
+    }
+  }
+
+  .market-rate {
+    color: $buttons;
+    text-decoration: underline;
+    margin-top: 5px;
+  }
 }
 
 // LAST PART
 .footer {
   background-color: $footer;
   width: 100%;
+  height: 80px;
+
+  .left-part {
+    width: 60%;
+    text-align: left;
+
+    > div {
+      font-size: 0.75em;
+      padding-left: 20px;
+      margin: 22px auto;
+      height: 36px;
+
+      .icon-chaltiel {
+        font-size: 1.2em;
+      }
+
+      .converter-word-color {
+        color: $gray;
+      }
+    }
+  }
+
+  button {
+    background: $buttons;
+    color: $white;
+    height: 36px;
+    margin: 22px auto;
+  }
 }
 
 // SURCHARGE MATERIAL
@@ -80,7 +127,7 @@ section.convert-chaltiel {
   color: rgba(0, 0, 0, .12) !important;
 }
 
-::ng-deep input:disabled {
+::ng-deep input, ::ng-deep .mat-form-field-label {
   color: black !important;
 }
 

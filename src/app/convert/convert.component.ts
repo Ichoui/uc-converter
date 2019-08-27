@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { debounceTime, tap } from 'rxjs/operators';
 
 @Component({
@@ -20,8 +20,12 @@ export class ConvertComponent implements OnInit {
   firstCurrency: string;
   secondCurrency: string;
 
+  date: Date;
 
-  constructor(private fb: FormBuilder) {
+  constructor() {
+    setInterval(() => {
+      this.date = new Date();
+    }, 1);
   }
 
   ngOnInit(): void {
