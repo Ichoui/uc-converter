@@ -2,14 +2,17 @@
 
 nav {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
 
   .logo {
-    font-size: 5em;
     color: $white;
+    font-size: 4em;
   }
 
   .title {
     color: $white;
+    font-size: 2em;
   }
 }

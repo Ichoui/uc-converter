@@ -21,17 +21,21 @@
 <section class="convert-chaltiel">
   <div class="subtitle"> EUR / UC</div>
   <div class="row inputs">
-    <mat-form-field class="value" appearance="outline">
-      <input matInput step="0.1" type="number" [formControl]="currency" (input)="currencyChange()">
-      <mat-label>Montant</mat-label>
-      <mat-icon matSuffix class="icon-euros"></mat-icon>
-    </mat-form-field>
+    <div class="left-part">
 
-    <mat-form-field class="converted" appearance="outline">
-      <input matInput type="number" [(ngModel)]="tes" disabled>
-      <mat-label>Converti en</mat-label>
-      <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
-    </mat-form-field>
+      <mat-form-field class="value" appearance="outline">
+        <input matInput step="0.1" type="number" [formControl]="currency" (input)="currencyChange()">
+        <mat-label>Montant</mat-label>
+        <mat-icon matSuffix class="icon-euros"></mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="right-part">
+      <mat-form-field class="converted" appearance="outline">
+        <input matInput type="number" [(ngModel)]="tes" disabled>
+        <mat-label>Converti en</mat-label>
+        <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
+      </mat-form-field>
+    </div>
   </div>
 
 
