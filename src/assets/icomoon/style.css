@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?d0joja');
-  src:  url('fonts/icomoon.eot?d0joja#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?d0joja') format('truetype'),
-    url('fonts/icomoon.woff?d0joja') format('woff'),
-    url('fonts/icomoon.svg?d0joja#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?31f37y');
+  src:  url('fonts/icomoon.eot?31f37y#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?31f37y') format('truetype'),
+    url('fonts/icomoon.woff?31f37y') format('woff'),
+    url('fonts/icomoon.svg?31f37y#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,73 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-down:before {
+  content: "\e903";
+}
+.icon-europe .path1:before {
+  content: "\e904";
+  color: rgb(65, 71, 155);
+}
+.icon-europe .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(255, 225, 90);
+}
+.icon-europe .path3:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(255, 225, 90);
+}
+.icon-europe .path4:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(255, 225, 90);
+}
+.icon-europe .path5:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(255, 225, 90);
+}
+.icon-europe .path6:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(255, 225, 90);
+}
+.icon-europe .path7:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(255, 225, 90);
+}
+.icon-europe .path8:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(255, 225, 90);
+}
+.icon-europe .path9:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(255, 225, 90);
+}
+.icon-europe .path10:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(255, 225, 90);
+}
+.icon-europe .path11:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(255, 225, 90);
+}
+.icon-europe .path12:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: rgb(255, 225, 90);
+}
+.icon-europe .path13:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(255, 225, 90);
+}
 .icon-arrows:before {
   content: "\e900";
 }

@@ -1,39 +1,25 @@
 <uc-navbar></uc-navbar>
-<!--<section class="convert-chaltiel" [formGroup]="form">
-  <mat-form-field class="euros">
-    <input matInput step="0.1" type="number" formControlName="euros" (input)="eurosChange()">
-    <mat-placeholder class="placeholder icon-euros"></mat-placeholder>
-  </mat-form-field>
-
-  <div class="switch icon-arrows"></div>
-
-  <mat-form-field class="uc">
-    <input matInput step="0.1" type="number" formControlName="chaltiel" (input)="chaltielChange()">
-    <mat-placeholder class="placeholder icon-chaltiel"></mat-placeholder>
-  </mat-form-field>
-</section>-->
-<!---->
-<!---->
-<!---->
-<!---->
-<!---->
 
 <section class="convert-chaltiel">
   <div class="subtitle"> EUR / UC</div>
   <div class="row inputs">
     <div class="left-part">
-
       <mat-form-field class="value" appearance="outline">
-        <input matInput step="0.1" type="number" [formControl]="currency" (input)="currencyChange()">
+        <input *ngIf="switchCurrency" matInput step="0.1" type="number" [formControl]="eurosCurr" [(ngModel)]="eurosCurrValue">
+        <input *ngIf="!switchCurrency" matInput step="0.1" type="number" [formControl]="chaltielCurr" [(ngModel)]="chaltielCurrValue">
         <mat-label>Montant</mat-label>
-        <mat-icon matSuffix class="icon-euros"></mat-icon>
+        <mat-icon *ngIf="switchCurrency" matSuffix class="icon-euros"></mat-icon>
+        <mat-icon *ngIf="!switchCurrency" matSuffix class="icon-chaltiel"></mat-icon>
+
       </mat-form-field>
     </div>
     <div class="right-part">
       <mat-form-field class="converted" appearance="outline">
-        <input matInput type="number" [(ngModel)]="tes" disabled>
+        <input *ngIf="switchCurrency" matInput type="number" [(ngModel)]="chaltielCurrValue">
+        <input *ngIf="!switchCurrency" matInput type="number" [(ngModel)]="eurosCurrValue">
         <mat-label>Converti en</mat-label>
-        <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
+        <mat-icon *ngIf="switchCurrency" matSuffix class="icon-chaltiel"></mat-icon>
+        <mat-icon *ngIf="!switchCurrency" matSuffix class="icon-euros"></mat-icon>
       </mat-form-field>
     </div>
   </div>
@@ -42,17 +28,21 @@
   <div class="row switcher">
     <div class="left-part">
       <mat-form-field class="converted" appearance="outline">
-        <input matInput type="text" [ngModel]="valueSwitch" disabled>
+        <input matInput type="text" [ngModel]="firstCurrency" disabled>
         <mat-label>Depuis</mat-label>
-        <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
+        <mat-icon matSuffix><span class="icon-europe"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span
+          class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span
+          class="path11"></span><span class="path12"></span><span class="path13"></span></span></mat-icon>
       </mat-form-field>
 
       <div class="switch icon-arrows" (click)="change()"></div>
 
       <mat-form-field class="converted" appearance="outline">
-        <input matInput type="text" [ngModel]="valueSwitch" disabled>
+        <input matInput type="text" [ngModel]="secondCurrency" disabled>
         <mat-label>Vers</mat-label>
-        <mat-icon matSuffix class="icon-chaltiel"></mat-icon>
+        <mat-icon matSuffix><span class="icon-europe"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span
+          class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span
+          class="path11"></span><span class="path12"></span><span class="path13"></span></span></mat-icon>
       </mat-form-field>
     </div>
     <div class="right-part">
