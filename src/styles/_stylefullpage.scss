@@ -7,3 +7,10 @@ body {
   padding: 0;
   background-color: $background;
 }
+
+
+@media all and (max-width: 768px) {
+  body {
+    overflow-y: hidden;
+  }
+}

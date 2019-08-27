@@ -11,6 +11,7 @@ section.convert-chaltiel {
   width: 80vw;
   margin: 15vh auto 0;
   border-radius: 5px;
+  height: inherit;
 
   .subtitle {
     position: absolute;
@@ -35,7 +36,6 @@ section.convert-chaltiel {
   .left-part, .right-part {
     width: 50%;
     text-align: center;
-
   }
 }
 
@@ -84,7 +84,7 @@ section.convert-chaltiel {
   .market-rate {
     color: $buttons;
     text-decoration: underline;
-    margin-top: 5px;
+    margin: 5px;
   }
 }
 
@@ -138,5 +138,39 @@ section.convert-chaltiel {
 }
 
 @media all and (max-width: 768px) {
+  section.convert-chaltiel {
+    width: 100vw;
+    margin: 36px 0 0;
+    border-radius: 0;
+    //height: 75vh;
+    padding: 20px 0 0;
 
+    .subtitle {
+      left: initial;
+    }
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: initial;
+
+    .left-part, .right-part {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+
+  .footer {
+    padding-left: 0;
+    margin: 0;
+    height: initial;
+    text-align: center;
+
+    > div {
+      padding-left: initial;
+      text-align: center;
+    }
+  }
 }

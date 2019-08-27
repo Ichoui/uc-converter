@@ -6,7 +6,7 @@ nav {
   width: 80vw;
   margin: 0 auto;
   padding: 20px;
-
+  height: 64px;
   .logo {
     color: $white;
     font-size: 4em;
@@ -19,5 +19,14 @@ nav {
     span {
       font-weight: bold;
     }
+  }
+}
+
+@media all and (max-width: 768px) {
+  nav {
+    padding: 20px 0;
+    justify-content: center;
+    text-align: center;
+
   }
 }
