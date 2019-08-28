@@ -54,7 +54,7 @@ section.convert-chaltiel {
 
   .icon-chaltiel {
     font-size: 180%;
-    :before {
+    &:before {
       position: absolute;
     }
   }
