@@ -61,6 +61,7 @@ section.convert-chaltiel {
 .switcher {
   mat-form-field {
     width: 35%;
+    padding-bottom: 2px;
 
     ::ng-deep input {
       font-family: $chalet-bold !important;
@@ -127,16 +128,19 @@ section.convert-chaltiel {
       padding-left: 20px;
       font-family: $standard;
 
-      div {
+      .fline, .sline {
         display: inline;
       }
 
-      div:first-child {
+      .fline {
         font-weight: bold;
         display: inline-flex;
         align-items: center;
-        padding-left: 2px;
 
+        div {
+          padding-left: 2px;
+          display: inline-flex;
+        }
 
         .icon-chaltiel {
           font-size: 1.2em;
