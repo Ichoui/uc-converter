@@ -130,7 +130,7 @@ section.convert-chaltiel {
       top: 50%;
 
       font-size: 0.75em;
-      padding-left: 20px;
+      padding-left: 2vw;
       font-family: $standard;
 
       .fline, .sline {
@@ -218,9 +218,17 @@ section.convert-chaltiel {
     height: initial;
     text-align: center;
 
-    > div {
+    .left-part {
       padding-left: initial;
       text-align: center;
+
+      > div {
+        position: initial;
+        transform: initial;
+        top: 0;
+        font-size: .8em;
+        margin-top: 5px;
+      }
     }
   }
 }
