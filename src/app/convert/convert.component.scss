@@ -52,8 +52,14 @@ section.convert-chaltiel {
     right: 0;
   }
 
-  .right-part .icon-chaltiel {
+  .icon-chaltiel {
     font-size: 180%;
+    :before {
+      position: absolute;
+    }
+  }
+  ::ng-deep .mat-form-field-suffix {
+    top: .10em;
   }
 }
 
