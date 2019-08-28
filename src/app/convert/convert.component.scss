@@ -113,13 +113,27 @@ section.convert-chaltiel {
       padding-left: 20px;
       margin: 22px auto;
       height: 36px;
+      font-family: $standard;
 
-      .icon-chaltiel {
-        font-size: 1.2em;
+      div {
+        display: inline;
       }
 
-      .converter-word-color {
-        color: $gray;
+      div:first-child {
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        padding-left: 2px;
+
+        .icon-chaltiel {
+          font-size: 1.2em;
+          padding-right: 2px;
+        }
+
+        .converter-word-color {
+          color: $gray;
+          padding-left: 2px;
+        }
       }
     }
   }
