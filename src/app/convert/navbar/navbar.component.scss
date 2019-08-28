@@ -8,18 +8,9 @@ nav {
   padding: 20px;
   height: 64px;
   .logo {
-    color: $white;
     font-size: 4em;
   }
 
-  .title {
-    color: $white;
-    font-size: 2em;
-    margin-left: 15px;
-    span {
-      font-weight: bold;
-    }
-  }
 }
 
 @media all and (max-width: 768px) {
@@ -27,6 +18,5 @@ nav {
     padding: 20px 0;
     justify-content: center;
     text-align: center;
-
   }
 }

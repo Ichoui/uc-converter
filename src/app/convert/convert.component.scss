@@ -19,6 +19,7 @@ section.convert-chaltiel {
     top: -35px;
     left: 0;
     font-size: 1.3em;
+    font-family: $chalet-bold;
   }
 }
 
@@ -56,6 +57,14 @@ section.convert-chaltiel {
 .switcher {
   mat-form-field {
     width: 35%;
+
+    ::ng-deep input {
+      font-family: $chalet-bold !important;
+    }
+
+    mat-icon {
+      font-size: 120%;
+    }
   }
 
   .switch {
@@ -68,6 +77,7 @@ section.convert-chaltiel {
 
   .curencies-rate {
     font-size: 1.5em;
+    font-family: $chalet-bold;
 
     span:first-child {
       color: $buttons;
