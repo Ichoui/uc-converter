@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ipt3sl');
-  src:  url('fonts/icomoon.eot?ipt3sl#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ipt3sl') format('truetype'),
-    url('fonts/icomoon.woff?ipt3sl') format('woff'),
-    url('fonts/icomoon.svg?ipt3sl#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?dy6x0j');
+  src:  url('fonts/icomoon.eot?dy6x0j#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?dy6x0j') format('truetype'),
+    url('fonts/icomoon.woff?dy6x0j') format('woff'),
+    url('fonts/icomoon.svg?dy6x0j#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-quichaud:before {
+  content: "\e904";
+}
 .icon-euros:before {
   content: "\e901";
 }

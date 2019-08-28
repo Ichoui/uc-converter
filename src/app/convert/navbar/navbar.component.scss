@@ -1,23 +1,40 @@
 @import "../../../styles/_shared.scss";
 
 nav {
-  display: flex;
-  align-items: center;
-  width: 80vw;
-  margin: 0 auto;
-  padding: 20px;
-  height: 64px;
-  .logo {
-    font-size: 4em;
-    color: $white;
+  height: 100px;
+  background-color: $navbar;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 20px;
+
+    .logo {
+      font-size: 4em;
+      color: $white;
+    }
   }
 
 }
 
 @media all and (max-width: 768px) {
   nav {
-    padding: 20px 0;
-    justify-content: center;
-    text-align: center;
+    padding: 10px 0;
+    height: auto;
+
+    > div {
+      justify-content: center;
+      padding: 0;
+
+      uc-quichaud {
+        display: none;
+      }
+
+      .logo {
+        font-size: 3.5em;
+      }
+    }
   }
 }

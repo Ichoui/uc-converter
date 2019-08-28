@@ -187,10 +187,14 @@ section.convert-chaltiel {
   }
 }
 
+uc-quichaud {
+  display: none;
+}
+
 @media all and (max-width: 768px) {
   section.convert-chaltiel {
     width: 100vw;
-    margin: 36px 0 0;
+    margin: 40px 0 0;
     border-radius: 0;
     //height: 75vh;
     padding: 20px 0 0;
@@ -230,5 +234,13 @@ section.convert-chaltiel {
         margin-top: 5px;
       }
     }
+  }
+
+  uc-quichaud {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    left: 50%;
   }
 }
