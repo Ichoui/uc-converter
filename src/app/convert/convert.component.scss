@@ -26,7 +26,7 @@ section.convert-chaltiel {
 .row {
   display: flex;
   flex-direction: row;
-  margin: 20px 0;
+  margin: 2vw 0;
   height: 60px;
   width: 100%;
 
@@ -44,12 +44,16 @@ section.convert-chaltiel {
 .inputs {
   mat-form-field {
     width: 90%;
-    margin: 0 20px;
+    //margin: 0 20px;
   }
 
   .icons {
     position: absolute;
     right: 0;
+  }
+
+  .right-part .icon-chaltiel {
+    font-size: 180%;
   }
 }
 
@@ -60,6 +64,11 @@ section.convert-chaltiel {
 
     ::ng-deep input {
       font-family: $chalet-bold !important;
+      font-size: 1.2em;
+    }
+
+    ::ng-deep .mat-form-field-suffix {
+      top: 0 !important;
     }
 
     mat-icon {
@@ -105,14 +114,17 @@ section.convert-chaltiel {
   height: 80px;
 
   .left-part {
+    position: relative;
     width: 60%;
     text-align: left;
 
     > div {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+
       font-size: 0.75em;
       padding-left: 20px;
-      margin: 22px auto;
-      height: 36px;
       font-family: $standard;
 
       div {
@@ -124,6 +136,7 @@ section.convert-chaltiel {
         display: inline-flex;
         align-items: center;
         padding-left: 2px;
+
 
         .icon-chaltiel {
           font-size: 1.2em;
@@ -153,6 +166,10 @@ section.convert-chaltiel {
 
 ::ng-deep input, ::ng-deep .mat-form-field-label {
   color: black !important;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  margin: 0 !important;
 }
 
 .mat-form-field {
