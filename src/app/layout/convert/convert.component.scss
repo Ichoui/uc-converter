@@ -1,0 +1,245 @@
+@import "../../../styles/_shared.scss";
+
+section.convert-chaltiel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $white;
+  width: 80vw;
+  margin: 15vh auto 0;
+  border-radius: 5px;
+  height: inherit;
+
+  .subtitle {
+    position: absolute;
+    color: $white;
+    top: -35px;
+    left: 0;
+    font-size: 1.3em;
+    font-family: $chalet-bold;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin: 2vw 0;
+  height: 60px;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .left-part, .right-part {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+// FIRST PART
+.inputs {
+  mat-form-field {
+    width: 90%;
+    //margin: 0 20px;
+  }
+
+  .icons {
+    position: absolute;
+    right: 0;
+  }
+
+  .icon-chaltiel {
+    font-size: 180%;
+    &:before {
+      position: absolute;
+    }
+  }
+  ::ng-deep .mat-form-field-suffix {
+    top: .10em;
+  }
+}
+
+// SECOND PART
+.switcher {
+  mat-form-field {
+    width: 35%;
+    padding-bottom: 2px;
+
+    ::ng-deep input {
+      font-family: $chalet-bold !important;
+      font-size: 1.2em;
+    }
+
+    ::ng-deep .mat-form-field-suffix {
+      top: 0 !important;
+    }
+
+    mat-icon {
+      font-size: 120%;
+    }
+  }
+
+  .switch {
+    display: inline-block;
+    width: 20%;
+    font-size: 2em;
+    color: $buttons;
+    cursor: pointer;
+  }
+
+  .curencies-rate {
+    font-size: 1.5em;
+    font-family: $chalet-bold;
+
+    span:first-child {
+      color: $buttons;
+      font-size: 0.7em;
+      padding-right: 5px;
+    }
+
+    span:last-child {
+      font-size: .8em;
+      padding: 0 4px;
+    }
+  }
+
+  .market-rate {
+    color: $buttons;
+    text-decoration: underline;
+    margin: 5px;
+  }
+}
+
+// LAST PART
+.footer {
+  background-color: $footer;
+  width: 100%;
+  height: 80px;
+
+  .left-part {
+    position: relative;
+    text-align: left;
+
+    > div {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+
+      font-size: 0.75em;
+      padding-left: 2vw;
+      font-family: $standard;
+
+      .fline, .sline {
+        display: inline;
+      }
+
+      .fline {
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+
+        div {
+          padding-left: 2px;
+          display: inline-flex;
+        }
+
+        .icon-chaltiel {
+          font-size: 1.2em;
+          padding-right: 2px;
+        }
+
+        .converter-word-color {
+          color: $gray;
+          padding-left: 2px;
+        }
+      }
+    }
+  }
+
+  button {
+    background: $buttons;
+    color: $white;
+    height: 36px;
+    margin: 22px auto;
+  }
+}
+
+// SURCHARGE MATERIAL
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-outline {
+  color: rgba(0, 0, 0, .12) !important;
+}
+
+::ng-deep input, ::ng-deep .mat-form-field-label {
+  color: black !important;
+}
+
+::ng-deep .mat-form-field-wrapper {
+  margin: 0 !important;
+}
+
+.mat-form-field {
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+uc-quichaud {
+  display: none;
+}
+
+@media all and (max-width: 768px) {
+  section.convert-chaltiel {
+    width: 100vw;
+    margin: 40px 0 0;
+    border-radius: 0;
+    //height: 75vh;
+    padding: 20px 0 0;
+
+    .subtitle {
+      left: initial;
+    }
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: initial;
+
+    .left-part, .right-part {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+
+  .footer {
+    padding-left: 0;
+    margin: 0;
+    height: initial;
+    text-align: center;
+
+    .left-part {
+      padding-left: initial;
+      text-align: center;
+
+      > div {
+        position: initial;
+        transform: initial;
+        top: 0;
+        font-size: .8em;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  uc-quichaud {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+}
