@@ -3,22 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatButtonModule, MatInputModule, MatTabsModule } from '@angular/material';
+import { MatButtonModule, MatInputModule, MatTabsModule, MatIconModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ConvertComponent } from './convert/convert.component';
-import { BourseComponent } from './convert/bourse/bourse.component';
-import { NavbarComponent } from './convert/navbar/navbar.component';
-import { MatIconModule } from '@angular/material/icon';
-import { QuichaudComponent } from './convert/quichaud/quichaud.component';
+import { LayoutComponent } from './layout/layout.component';
+import { BourseComponent } from './layout/bourse/bourse.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import { QuichaudComponent } from './layout/quichaud/quichaud.component';
+import { ConvertComponent } from './layout/convert/convert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConvertComponent,
+    LayoutComponent,
     BourseComponent,
     NavbarComponent,
-    QuichaudComponent
+    QuichaudComponent,
+    ConvertComponent
   ],
   imports: [
     BrowserModule,

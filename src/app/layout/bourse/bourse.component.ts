@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'uc-bourse',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BourseComponent implements OnInit {
 
   date: Date;
+  @Output() convertPage = new EventEmitter<number>();
 
   constructor() {
     setInterval(() => {
@@ -16,6 +17,10 @@ export class BourseComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  toConvert(): void {
+    this.convertPage.emit(0);
   }
 
 }

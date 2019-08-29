@@ -1,0 +1,12 @@
+@import "../../../styles/shared";
+
+:host {
+  text-align: center;
+}
+
+button {
+  background: $buttons;
+  color: $white !important;
+  margin: 0 auto;
+}
+
