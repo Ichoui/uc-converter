@@ -186,10 +186,6 @@ section.convert-chaltiel {
   }
 }
 
-uc-quichaud {
-  display: none;
-}
-
 @media all and (max-width: 768px) {
   section.convert-chaltiel {
     width: 100vw;
@@ -214,6 +210,9 @@ uc-quichaud {
     }
   }
 
+  .market-rate {
+    margin: 15px !important;
+  }
 
   .footer {
     padding-left: 0;
@@ -230,16 +229,9 @@ uc-quichaud {
         transform: initial;
         top: 0;
         font-size: .8em;
-        margin-top: 5px;
+        margin-top: 15px;
       }
     }
   }
 
-  uc-quichaud {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    transform: translateX(-50%);
-    left: 50%;
-  }
 }
