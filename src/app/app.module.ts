@@ -11,6 +11,7 @@ import { BourseComponent } from './layout/bourse/bourse.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { QuichaudComponent } from './layout/quichaud/quichaud.component';
 import { ConvertComponent } from './layout/convert/convert.component';
+import { GoogleChartsModule } from 'angular-google-charts';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ConvertComponent } from './layout/convert/convert.component';
     FormsModule,
     MatIconModule,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    GoogleChartsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
