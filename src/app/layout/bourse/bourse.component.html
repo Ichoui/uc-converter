@@ -3,9 +3,11 @@
 <div class="content-chart">
   <google-chart [data]="myData"
                 [type]="LineChart"
-                style="width: 100%"
                 [columnNames]="myColumnNames"
-                [options]="myOptions">
+                [options]="myOptions"
+                [width]="myWidth"
+                [height]="myHeight"
+  >
   </google-chart>
 </div>
 

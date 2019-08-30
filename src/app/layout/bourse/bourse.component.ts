@@ -16,6 +16,8 @@ export class BourseComponent implements OnInit {
   LineChart = 'LineChart';
   myOptions: any;
   myColumnNames = ['', 'Cours du Chaltiel'];
+  myWidth = 900;
+  myHeight = 600;
 
   constructor() {
     setInterval(() => {
