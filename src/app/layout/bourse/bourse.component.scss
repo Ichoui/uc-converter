@@ -6,11 +6,20 @@
   color: $white;
 }
 
+h3 {
+  font-family: $chalet-normal;
+
+}
+
 .content-chart {
   width: 80vw;
   margin: 0 auto;
 }
 
+.containbtn {
+  text-align: center;
+  margin-top: 5px;
+}
 button {
   background: $buttons;
   color: $white !important;

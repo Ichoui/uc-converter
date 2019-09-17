@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { debounceTime, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'uc-layout',

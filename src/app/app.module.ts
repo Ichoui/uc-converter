@@ -12,6 +12,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { QuichaudComponent } from './layout/quichaud/quichaud.component';
 import { ConvertComponent } from './layout/convert/convert.component';
 import { GoogleChartsModule } from 'angular-google-charts';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { GoogleChartsModule } from 'angular-google-charts';
     MatIconModule,
     MatButtonModule,
     MatTabsModule,
-    GoogleChartsModule.forRoot()
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
