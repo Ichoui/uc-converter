@@ -36,6 +36,13 @@ section.convert-uc {
   .left-part, .right-part {
     width: 50%;
     text-align: center;
+    button:first-child {
+      margin-right: 7px;
+    }
+
+    button:last-child {
+      margin-left: 7px;
+    }
   }
 }
 
@@ -204,6 +211,7 @@ section.convert-uc {
     height: initial;
 
     .left-part, .right-part {
+      display: flex;
       width: 100%;
       text-align: center;
     }

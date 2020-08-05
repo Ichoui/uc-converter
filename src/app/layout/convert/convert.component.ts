@@ -2,6 +2,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { debounceTime, tap } from 'rxjs/operators';
 
+
+export const UC = 1;
+
 @Component({
   selector: 'uc-convert',
   templateUrl: './convert.component.html',
@@ -23,6 +26,7 @@ export class ConvertComponent implements OnInit {
   date: Date;
 
   @Output() ratePage = new EventEmitter<number>();
+
   constructor() {
     setInterval(() => {
       this.date = new Date();
@@ -44,7 +48,7 @@ export class ConvertComponent implements OnInit {
         tap(inputValue => {
           console.log(inputValue);
           this.eurosCurrValue = inputValue;
-          this.ucCurrValue = Number((this.eurosCurrValue / 20.33).toFixed(2));
+          this.ucCurrValue = Number((this.eurosCurrValue / UC).toFixed(2));
         })
       ).subscribe();
     } else {
@@ -55,7 +59,7 @@ export class ConvertComponent implements OnInit {
         tap(inputValue => {
           console.log(inputValue);
           this.ucCurrValue = inputValue;
-          this.eurosCurrValue = Number((this.ucCurrValue * 20.33).toFixed(2));
+          this.eurosCurrValue = Number((this.ucCurrValue * UC).toFixed(2));
         })
       ).subscribe();
     }
@@ -79,8 +83,12 @@ export class ConvertComponent implements OnInit {
     }
   }
 
+  toHistory(): void {
+    this.ratePage.emit(0);
+  }
+
   toCurrencyRate(): void {
-    this.ratePage.emit(1);
+    this.ratePage.emit(2);
   }
 
 }

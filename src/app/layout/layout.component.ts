@@ -10,7 +10,7 @@ export class LayoutComponent implements OnInit {
   selectedIndex: number;
 
   ngOnInit(): void {
-    this.selectedIndex = 0;
+    this.selectedIndex = 1;
   }
 
   ratePage(index): void {

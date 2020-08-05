@@ -13,6 +13,7 @@ import { QuichaudComponent } from './layout/quichaud/quichaud.component';
 import { ConvertComponent } from './layout/convert/convert.component';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { ChartsModule } from 'ng2-charts';
+import { HistoryComponent } from './layout/history/history.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ChartsModule } from 'ng2-charts';
     BourseComponent,
     NavbarComponent,
     QuichaudComponent,
-    ConvertComponent
+    ConvertComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,

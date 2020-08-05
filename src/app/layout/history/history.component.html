@@ -1,0 +1,15 @@
+<h2>Historique de l'UC depuis sa création</h2>
+<h3>Date : {{ date | date : 'dd-MM-yyyy'}}</h3>
+
+<div class="content-chart">
+  <canvas baseChart
+          chartType="line"
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"></canvas>
+</div>
+
+<div class="containbtn">
+  <button mat-button color='primary' (click)="toConvert()">Revenir au convertisseur</button>
+</div>

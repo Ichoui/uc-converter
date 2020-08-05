@@ -1,20 +1,20 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { Color } from 'ng2-charts';
 import { ChartDataSets, ChartOptions } from 'chart.js';
+import { Color } from 'ng2-charts';
 
 @Component({
-  selector: 'uc-bourse',
-  templateUrl: './bourse.component.html',
-  styleUrls: ['./bourse.component.scss']
+  selector: 'uc-history',
+  templateUrl: './history.component.html',
+  styleUrls: ['./history.component.scss']
 })
-export class BourseComponent implements OnInit {
+export class HistoryComponent implements OnInit {
 
-  date: Date;
+  date: Date = new Date();
 
   @Output() convertPage = new EventEmitter<number>();
 
   lineChartData: ChartDataSets[] = [
-    {data: [1, 1, 1, 1, 1, 1, 1, 1], label: 'Cours de l\'UC pour 1 Euro'},
+    {data: [null, 20.33, 1], label: ''},
   ];
   lineChartLabels: any;
 
@@ -62,35 +62,11 @@ export class BourseComponent implements OnInit {
     }
   ];
 
-  // public lineChartPlugins = [pluginAnnotations];
-
-
-  constructor() {
-    setInterval(() => {
-      this.date = new Date();
-    }, 1);
-  }
-
   ngOnInit() {
-    this.lineChartLabels = [this.checkHour(21), this.checkHour(18), this.checkHour(15), this.checkHour(12), this.checkHour(9), this.checkHour(6), this.checkHour(3), this.checkHour(0)];
-  }
-
-  checkHour(minus, last?): any {
-    const date = new Date().getHours();
-    if (last) {
-      return (date + 3) + 'h';
-    }
-    if (date - minus < 0) {
-      return ((date - minus) + 24) + 'h';
-    } else if (date - minus < 10 && date - minus >= 0) {
-      return '0' + (date - minus) + 'h';
-    } else {
-      return (date - minus) + 'h';
-    }
+    this.lineChartLabels = ['2018', '2019', '2020', '2021'];
   }
 
   toConvert(): void {
     this.convertPage.emit(1);
   }
-
 }
