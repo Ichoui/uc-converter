@@ -10,10 +10,10 @@ import { debounceTime, tap } from 'rxjs/operators';
 export class ConvertComponent implements OnInit {
 
   eurosCurr: FormControl;
-  chaltielCurr: FormControl;
+  ucCurr: FormControl;
 
   eurosCurrValue: number;
-  chaltielCurrValue: number;
+  ucCurrValue: number;
 
   switchCurrency = false;
 
@@ -31,7 +31,7 @@ export class ConvertComponent implements OnInit {
 
   ngOnInit(): void {
     this.eurosCurr = new FormControl();
-    this.chaltielCurr = new FormControl();
+    this.ucCurr = new FormControl();
     this.change();
   }
 
@@ -44,18 +44,18 @@ export class ConvertComponent implements OnInit {
         tap(inputValue => {
           console.log(inputValue);
           this.eurosCurrValue = inputValue;
-          this.chaltielCurrValue = Number((this.eurosCurrValue / 20.33).toFixed(2));
+          this.ucCurrValue = Number((this.eurosCurrValue / 20.33).toFixed(2));
         })
       ).subscribe();
     } else {
       // UC -> EUR
       console.log('UC --> Euros');
-      this.chaltielCurr.valueChanges.pipe(
+      this.ucCurr.valueChanges.pipe(
         debounceTime(600),
         tap(inputValue => {
           console.log(inputValue);
-          this.chaltielCurrValue = inputValue;
-          this.eurosCurrValue = Number((this.chaltielCurrValue * 20.33).toFixed(2));
+          this.ucCurrValue = inputValue;
+          this.eurosCurrValue = Number((this.ucCurrValue * 20.33).toFixed(2));
         })
       ).subscribe();
     }

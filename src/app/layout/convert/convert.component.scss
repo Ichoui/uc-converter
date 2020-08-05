@@ -1,6 +1,6 @@
 @import "../../../styles/_shared.scss";
 
-section.convert-chaltiel {
+section.convert-uc {
   position: relative;
   display: flex;
   justify-content: center;
@@ -51,7 +51,7 @@ section.convert-chaltiel {
     right: 0;
   }
 
-  .icon-chaltiel {
+  .icon-uc {
     font-size: 180%;
     &:before {
       position: absolute;
@@ -146,7 +146,7 @@ section.convert-chaltiel {
           display: inline-flex;
         }
 
-        .icon-chaltiel {
+        .icon-uc {
           font-size: 1.2em;
           padding-right: 2px;
         }
@@ -187,7 +187,7 @@ section.convert-chaltiel {
 }
 
 @media all and (max-width: 768px) {
-  section.convert-chaltiel {
+  section.convert-uc {
     width: 100vw;
     margin: 40px 0 0;
     border-radius: 0;

@@ -14,7 +14,7 @@ export class BourseComponent implements OnInit {
   @Output() convertPage = new EventEmitter<number>();
 
   lineChartData: ChartDataSets[] = [
-    {data: [20.33, 20.33, 20.33, 20.33, 20.33, 20.33, 20.33, 20.33], label: 'Cours du Chaltiel pour 1 Euro'},
+    {data: [1, 1, 1, 1, 1, 1, 1, 1], label: 'Cours de l\'UC pour 1 Euro'},
   ];
   lineChartLabels: any;
 
